@@ -1,0 +1,16 @@
+create_element
+使用double pointer當作傳入值，並且輸入這個矩陣的行個數與列個數(使用value)，並且回傳值使用void(助教規定)，
+為何使用double pointer呢?也是因為前面使用動態陣列的關係，這樣就可以直接將create出來的二維矩陣傳入，然後再
+配上其行列個數，就可以快速地進行隨機內部值。
+
+kronecker_product
+因為需要回傳三樣東西，自然能選擇的方式只有pointer或是reference，而助教在這邊是使用reference的方式，好處是
+相當直觀，可以直接將二維矩陣傳出，如果直接使用double pointer回傳，那就必須先將kron_m進行create出其大小，
+不然他是無法去直接輸入到這個function中，代表如果今天要做100次kronecker_product，我就必須先create一百次，
+但如果使用助教提供的方法，直接使用reference，就可以讓其輸入，並在kronecker_product內直接順便create其kronecker_product後
+的矩陣，這樣就可以較為簡便化。
+
+minimun
+我是使用double pointer 傳入二維矩陣，然後搭配上矩陣的行列個數(pass by value)，較為直觀使用，與create_element一樣，
+因為一開始就使用double pointer去創造矩陣，當然直接使用會較為快速，而且行列個數已經用int去將6個矩陣的值記錄下來，所以
+才使用pass by value的方式。

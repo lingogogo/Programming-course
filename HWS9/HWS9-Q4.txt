@@ -1,0 +1,6 @@
+如果實際測試會發現，是因為輸入型態不一樣，如果將3.2換成3，他會從double轉成int，
+不論是template或是overloaded function都吃不到，因為我們所設計的function左右都要
+為相同型態，但如果在前面加一個<double>，就可以使用template的function，或是強制3
+轉成double，也是可行的。
+但如果都不使用上述的方法，應該是沒辦法執行。
+

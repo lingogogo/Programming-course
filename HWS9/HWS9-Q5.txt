@@ -1,0 +1,17 @@
+a.
+在宣告的地方，將times = 1設定在上面，並且要記得將default的值放在非預設值的右邊
+void song(const char* name, int times = 1);
+
+b.
+函數定義
+void song(const char* name, int times)
+{
+	body of the function
+}
+並不需要將預設值寫進來定義中，這樣即可使用，如果使用者沒有輸入times值的話，他會
+依照宣告將times帶入1，如果使用者有輸入的話，就會將其值改成使用者輸入的數值。
+
+c.
+可以
+void song(const char* name = "O, My Papa", int times = 1);
+這樣default輸入即為 O, My Papa.

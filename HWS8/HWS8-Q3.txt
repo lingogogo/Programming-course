@@ -1,0 +1,7 @@
+a. void realease(double **matrix, const int rows);
+b. void realease(double **&matrix, const int rows);
+
+當呼叫a的時候，會創造一個double pointer去接**matrix，至於後半部的部分都一樣，需要一個變數去接rows，但因為a與b都是一樣的，並不討論
+後半部的差異。
+呼叫b的時候，會直接取用原本double pointer的資訊，並不需要多創造一個double pointer，去接輸入的double pointer，所以會比a來的有效率。
+其他部分，delete的部分，應該都是一樣的。
